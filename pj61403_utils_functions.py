@@ -92,7 +92,7 @@ def deprocess_image(x):
     x = np.clip(x, 0, 255).astype('uint8')
     return x
 
-def my_decode_predictions(preds, top=4, class_list_path='/content/PJ61403_DATA/PJ61403_index.json'):
+def my_decode_predictions(preds, top=4, class_list_path='/content/PJ61403_DATA_split_50-10-40/PJ61403_index.json'):
   if len(preds.shape) != 2 or preds.shape[1] != 4:
     raise ValueError('`decode_predictions` expects '
                      'a batch of predictions '
